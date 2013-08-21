@@ -1,10 +1,15 @@
 #!/bin/bash
 
-COMMAND="log --graph --decorate --oneline --all"
+COMMAND="log --pretty=format:%h%x09%an%x09%ad%x09%s --all --decorate --graph"
 
-if [ ! -e $VIM_OUTPUT_FILE ]
+if [ "$1" = "-f" ]
 then
-	touch $VIM_OUTPUT_FILE
+	if [ ! -e $VIM_OUTPUT_FILE ]
+	then
+		touch $VIM_OUTPUT_FILE
+	fi
+	$SOURCE_CONTROL $COMMAND > $VIM_OUTPUT_FILE
+else
+	$SOURCE_CONTROL $COMMAND
 fi
 
-$SOURCE_CONTROL $COMMAND > $VIM_OUTPUT_FILE
