@@ -1,0 +1,5 @@
+#!/bin/bash
+
+COMMAND="diff"
+
+$SOURCE_CONTROL $COMMAND $1 > $VIM_OUTPUT_FILE
