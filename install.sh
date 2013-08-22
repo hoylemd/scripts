@@ -17,6 +17,7 @@ ln -f  $BIN_DIRECTORY/diffOnFile.sh $LINK_DIRECTORY/d
 ln -f  $BIN_DIRECTORY/findInFiles.sh $LINK_DIRECTORY/f
 ln -f  $BIN_DIRECTORY/gitLog.sh $LINK_DIRECTORY/log
 ln -f  $BIN_DIRECTORY/gitStatus.sh $LINK_DIRECTORY/s
+ln -f  $BIN_DIRECTORY/gitPush.sh $LINK_DIRECTORY/s
 
 if [ ! -d $VIM_DIRECTORY ]; then
 	mkdir $VIM_DIRECTORY
