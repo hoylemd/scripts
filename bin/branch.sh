@@ -3,8 +3,6 @@
 BRANCH="branch"
 CHECKOUT="checkout"
 
-echo $1
-
 if [ -z $1 ]
 then
 	$SOURCE_CONTROL $CHECKOUT master
