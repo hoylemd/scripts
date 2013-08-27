@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMAND="log  --all --decorate --oneline"
+COMMAND="log --all --decorate --oneline"
 
 if [ "$1" = "-f" ]
 then
