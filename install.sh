@@ -18,6 +18,7 @@ ln -f  $BIN_DIRECTORY/findInFiles.sh $LINK_DIRECTORY/f
 ln -f  $BIN_DIRECTORY/gitLog.sh $LINK_DIRECTORY/log
 ln -f  $BIN_DIRECTORY/gitStatus.sh $LINK_DIRECTORY/s
 ln -f  $BIN_DIRECTORY/gitPush.sh $LINK_DIRECTORY/s
+ln -f  $BIN_DIRECTORY/graph.sh $LINK_DIRECTORY/graph
 
 if [ ! -d $VIM_DIRECTORY ]; then
 	mkdir $VIM_DIRECTORY
