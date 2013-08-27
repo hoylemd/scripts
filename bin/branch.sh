@@ -1,11 +1,13 @@
 #!/bin/bash
 
-COMMAND="checkout"
+BRANCH="branch"
+CHECKOUT="checkout"
 
 if [ -z $1 ]
 then
-	$SOURCE_CONTROL $COMMAND $1
+    $SOURCE_CONTROL $BRANCH $1
+	$SOURCE_CONTROL $CHECKOUT $1
 else
-	$SOURCE_CONTROL $COMMAND master
+	$SOURCE_CONTROL $CHECKOUT master
 fi
 
