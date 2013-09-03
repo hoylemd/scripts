@@ -2,11 +2,16 @@
 
 BIN_DIRECTORY=bin
 VIM_DIRECTORY=~/.vim
+PY_DIRECTORY=py
 LINK_DIRECTORY=~/bin
+PY_LINK_DIRECTORY=~/py
 
 if [ ! -d $LINK_DIRECTORY ]; then
 	mkdir $LINK_DIRECTORY
+else
+    rm $LINK_DIRECTORY/*
 fi
+
 
 ln -f  $BIN_DIRECTORY/add.sh $LINK_DIRECTORY/a
 ln -f  $BIN_DIRECTORY/branch.sh $LINK_DIRECTORY/b
@@ -20,6 +25,15 @@ ln -f  $BIN_DIRECTORY/gitStatus.sh $LINK_DIRECTORY/s
 ln -f  $BIN_DIRECTORY/gitPush.sh $LINK_DIRECTORY/p
 ln -f  $BIN_DIRECTORY/graph.sh $LINK_DIRECTORY/graph
 ln -f  $BIN_DIRECTORY/mysql.sh $LINK_DIRECTORY/sql
+
+
+if [ ! -d $PY_LINK_DIRECTORY ]; then
+	mkdir $PY_LINK_DIRECTORY
+else
+    rm $PY_LINK_DIRECTORY/*
+fi
+
+ln -f  $PY_DIRECTORY/formatSqlOutput.py $PY_LINK_DIRECTORY/fsql.py
 
 if [ ! -d $VIM_DIRECTORY ]; then
 	mkdir $VIM_DIRECTORY

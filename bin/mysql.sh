@@ -8,6 +8,10 @@ DATABASE=sabretooth
 # config file
 CONFIG=.mysqlrc
 
+# shorthand the formatter
+FORMATTER=~/py/fsql.py
+
+
 if [ ! -e $CONFIG ]
 then
     echo "USERNAME="$USERNAME >> $CONFIG
@@ -31,4 +35,4 @@ then
 	touch $INPUT
 fi
 
-cat $INPUT | mysql -u$USERNAME -p$PASSWORD $DATABASE > .output
+cat $INPUT | mysql -u$USERNAME -p$PASSWORD $DATABASE | python $FORMATTER > .output
