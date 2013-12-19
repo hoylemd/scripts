@@ -1,1 +1,1 @@
-for i in {1..65535};do printf "%x\n" $i;done|while read -r u;do printf "\033[38;5;$((16+$((16#$u))%230))m\u$u\033[0m";done #Unicode rainbow
+yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done # A rainbow in your shell.
