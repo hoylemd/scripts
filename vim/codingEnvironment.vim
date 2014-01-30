@@ -1,8 +1,6 @@
 :vsplit
 :8split
 :e $COMMIT_MESSAGE_FILE
-:51vsplit
-:e .commitsvn
 :wincmd j
 :e $VIM_OUTPUT_FILE
 :wincmd l
