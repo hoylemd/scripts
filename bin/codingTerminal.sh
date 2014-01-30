@@ -1,7 +1,7 @@
 #!/bin/bash
 COMMAND="vim"
 COMMIT_TEMPLATE0="short description"
-COMMIT_TEMPLATE1="bug #BUG_ID: COMMENT"
+COMMIT_TEMPLATE1="bug #BUG_ID:"
 COMMIT_TEMPLATE2="work_time: HOURS"
 
 # set up the commit file
