@@ -11,6 +11,6 @@ if [ -z $1 ]
 then
 	echo "Please supply a file to blame"
 else
-	$SOURCE_CONTROL $COMMAND $1 > $VIM_OUTPUT_FILE
+	$SOURCE_CONTROL $COMMAND $1 | python ~/py/blame.py > $VIM_OUTPUT_FILE
 fi
 

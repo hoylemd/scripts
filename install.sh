@@ -12,7 +12,6 @@ else
     rm $LINK_DIRECTORY/*
 fi
 
-
 ln -f  $BIN_DIRECTORY/add.sh $LINK_DIRECTORY/a
 ln -f  $BIN_DIRECTORY/branch.sh $LINK_DIRECTORY/b
 ln -f  $BIN_DIRECTORY/blame.sh $LINK_DIRECTORY/bl
@@ -35,6 +34,7 @@ else
 fi
 
 ln -f  $PY_DIRECTORY/formatSqlOutput.py $PY_LINK_DIRECTORY/fsql.py
+ln -f  $PY_DIRECTORY/blame.py $PY_LINK_DIRECTORY/blame.py
 
 if [ ! -d $VIM_DIRECTORY ]; then
 	mkdir $VIM_DIRECTORY

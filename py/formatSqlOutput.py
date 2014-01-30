@@ -16,41 +16,46 @@ if __name__ == "__main__":
     # read in the lines
     records = sys.stdin.readlines()
 
-    # TODO: discard lines that are not obviously part of a table
-    # count the number of columns by counting the tabs in the first line
-    columns = records[0].count('\t') + 1
+    print len(records),
+    print " records."
 
-    # initialize the widths list
-    widths = []
-    for i in range(0, columns):
-        widths.append(0)
+    if (len(records) > 0):
+        # TODO: discard lines that are not obviously part of a table
+        # count the number of columns by counting the tabs in the first line
+        columns = records[0].count('\t') + 1
 
-    # split each line into a list of fields
-    lists = []
-    for record in records:
-        list = record.rstrip().split("\t")
-        i = 0
+        # initialize the widths list
+        widths = []
+        for i in range(0, columns):
+            widths.append(0)
 
-        # also, widen the columns, if needed
-        for field in list:
-            tabs = countTabs(field)
-            if tabs > widths[i]:
-                widths[i] = tabs
-            i += 1
+        # split each line into a list of fields
+        lists = []
+        for record in records:
+            list = record.rstrip().split("\t")
+            i = 0
 
-        lists.append(list)
+            # also, widen the columns, if needed
+            for field in list:
+                tabs = countTabs(field)
 
-    # print out each record
-    for list in lists:
-        out = ""
-        i = 0
-        for word in list:
-            out += word;
+                if tabs > widths[i]:
+                    widths[i] = tabs
+                i += 1
 
-            # determine the number of tabs needed to make this column line up
-            remaining_tabs = widths[i] - countTabs(word)
-            for j in range(0, remaining_tabs + 1):
-                out += "\t"
-            i += 1
+            lists.append(list)
 
-        print out
+        # print out each record
+        for list in lists:
+            out = ""
+            i = 0
+            for word in list:
+                out += word;
+
+                # determine the number of tabs needed to make this column line up
+                remaining_tabs = widths[i] - countTabs(word)
+                for j in range(0, remaining_tabs + 1):
+                    out += "\t"
+                i += 1
+
+            print out
