@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMAND="diff"
+COMMAND="diff --ignore-space-at-eol"
 NOFILE_MSG="Please supply a file to diff"
 
 if [ -z $1 ]
