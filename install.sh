@@ -25,7 +25,7 @@ ln -f  $BIN_DIRECTORY/gitPush.sh $LINK_DIRECTORY/p
 ln -f  $BIN_DIRECTORY/graph.sh $LINK_DIRECTORY/graph
 ln -f  $BIN_DIRECTORY/rainbow.sh $LINK_DIRECTORY/rainbow
 ln -f  $BIN_DIRECTORY/mysql.sh $LINK_DIRECTORY/sql
-
+ln -f  $BIN_DIRECTORY/jslintOnFile.sh $LINK_DIRECTORY/l
 
 if [ ! -d $PY_LINK_DIRECTORY ]; then
 	mkdir $PY_LINK_DIRECTORY
