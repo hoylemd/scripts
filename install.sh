@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#change this to 'big' for 3 vim columns
+SCREEN_SIZE=small
 BIN_DIRECTORY=bin
 VIM_DIRECTORY=~/.vim
 PY_DIRECTORY=py
@@ -40,4 +42,8 @@ if [ ! -d $VIM_DIRECTORY ]; then
 	mkdir $VIM_DIRECTORY
 fi
 
-ln -f  vim/codingEnvironment.vim $VIM_DIRECTORY/codingEnvironment.vim
+if [ "$SCREEN_SIZE" = "big"]; then
+    ln -f  vim/codingEnvironment.vim $VIM_DIRECTORY/codingEnvironmentBig.vim
+else
+    ln -f  vim/codingEnvironment.vim $VIM_DIRECTORY/codingEnvironment.vim
+fi
