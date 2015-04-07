@@ -7,7 +7,7 @@ if [ -n "$ENV" ]; then
   source $ENV/bin/activate
 fi
 
-if [-n "$SERVICENAME"]; then
+if [ -n "$SERVICENAME"]; then
   sudo supervisorctl stop $SERVICENAME
 fi
 
