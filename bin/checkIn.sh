@@ -1,16 +1,9 @@
 #!/bin/bash
 
-COMMAND="commit"
-
-if [ ! -e $COMMIT_MESSAGE_FILE ]
-then
-	touch $COMMIT_MESSAGE_FILE
+if [ -a "Makefile" ]; then
+  make clean
 fi
 
-if [ -z $1 ]
-then
-	$SOURCE_CONTROL $COMMAND -F $COMMIT_MESSAGE_FILE
-else
-	$SOURCE_CONTROL $COMMAND $@ -F $COMMIT_MESSAGE_FILE
-fi
+git add -i
+git commit
 
